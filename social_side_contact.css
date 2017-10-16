@@ -1,0 +1,45 @@
+
+/* Social Icons */ 
+#social_side_links {
+    position: fixed;
+    top: 30%;
+    left: -50px;
+    padding: 0;
+    list-style: none;
+    z-index: 99;
+    }
+ #social_side_links li a {
+      display: block; }
+ #social_side_links li a.facebook-icon {
+        background-color: #3c5a96; }
+   #social_side_links li a.messenger-icon {
+        background-color: #ffffff; }
+#social_side_links li a.line-icon {
+        background-color: #00B900; }
+     #social_side_links li a.email-icon {
+        background-color: #aaaaaa; }
+   #social_side_links li a.phone-icon {
+        background-color: #018F99; }
+     #social_side_links li a img {
+        display: block;
+        max-width: 50px;
+        padding: 10px;
+        -webkit-transition: background .2s ease-in-out;
+        -moz-transition: background .2s ease-in-out;
+        -o-transition: background .2s ease-in-out;
+        transition: background .2s ease-in-out; }
+#social_side_links li:hover img {
+      background: rgba(0, 0, 0, 0.2); }
+
+@media screen and (max-width: 767px) {
+   #social_side_links {
+      top: auto !important;
+      bottom: -32px !important;
+      text-align: center;
+      width: 100%; }
+       #social_side_links li {
+        display: inline-block !important;
+        width: 20%; }
+       #social_side_links li img {
+          margin: 0 auto; }
+}

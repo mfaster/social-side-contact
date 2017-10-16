@@ -37,7 +37,7 @@ function social_side_contact() {
  */
 add_action( 'wp_enqueue_scripts', 'social_side_contact_scripts' );
 
-function seed_confirm_scripts() {
+function social_side_contact_scripts() {
 	if(!is_admin()) {
 		wp_enqueue_style( 'social_side_contact', plugin_dir_url( __FILE__ ) . 'social_side_contact.css' , array() );
 	}

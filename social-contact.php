@@ -11,7 +11,6 @@
 
 add_action( 'wp_head', 'social_side_contact' );
 function social_side_contact() {
-  if( is_single() ) {
   ?>
 
     <ul id="social_side_links">
@@ -27,7 +26,6 @@ function social_side_contact() {
     </ul>
     
   <?php
-  }
 }
 
 /**

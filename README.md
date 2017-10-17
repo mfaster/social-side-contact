@@ -1,7 +1,7 @@
 # Social Side Contact
 
 
-Make you customer easy to contact you via social network such as Line, Facebookpage, Facebookchat and Phone
+Make you customer easy to contact you via social network such as Line, Facebookpage, Facebookchat, Phone and e-mail 
 
 
 ## Getting Started
@@ -35,6 +35,11 @@ https://line.me/ti/p/~0897778777
 Phone number
 ```
 0897778777
+```
+
+E-mail
+```
+mfaster@mfaster.com
 ```
 
 ## License

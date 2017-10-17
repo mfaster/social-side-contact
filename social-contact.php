@@ -42,6 +42,7 @@ function social_side_contact_settings() {
 	register_setting( 'social-side-contact-settings-group', 'fbm' );
   register_setting( 'social-side-contact-settings-group', 'line' );
   register_setting( 'social-side-contact-settings-group', 'phone' );
+  register_setting( 'social-side-contact-settings-group', 'mail' );
 }
 
 function social_side_contact_settings_page() {
@@ -69,9 +70,15 @@ function social_side_contact_settings_page() {
             </tr>
 
             <tr valign="top">
+            <th scope="row">E-mail</th>
+            <td><input type="text" name="mail" value="<?php echo esc_attr( get_option('mail') ); ?>" /></td>
+            </tr>
+
+            <tr valign="top">
             <th scope="row">Phone Number</th>
             <td><input type="text" name="phone" value="<?php echo esc_attr( get_option('phone') ); ?>" /></td>
             </tr>
+
         </table>
         
         <?php submit_button(); ?>
@@ -97,8 +104,11 @@ function social_side_contact() {
       </li><li>
         <a class="line-icon" <?php echo 'href="'. get_option( 'line' ) . '" ';?> target="_blank"><?php echo '<img src="' . plugins_url( 'images/LINE_Icon.png', __FILE__ ) . '" > ';?></a>
       </li><li>
+        <a class="email-icon" <?php echo 'href="mailto:'. get_option( 'mail' ) . '" > ';?> <?php echo '<img src="' . plugins_url( 'images/emailIcon.png', __FILE__ ) . '" > ';?></a>
+      </li><li>
         <a class="phone-icon" <?php echo 'href="tel:+'. get_option( 'line' ) . '" > ';?> <?php echo '<img src="' . plugins_url( 'images/phoneicon.png', __FILE__ ) . '" > ';?></a>
       </li>
+      
     </ul>
     
   <?php

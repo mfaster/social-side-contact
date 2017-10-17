@@ -9,24 +9,7 @@
  * License: GPL2
  */
 
-add_action( 'wp_head', 'social_side_contact' );
-function social_side_contact() {
-  ?>
 
-    <ul id="social_side_links">
-      <li>
-        <a class="facebook-icon" href="https://www.facebook.com/mfasterpro" target="_blank"><img src="https://mfaster.com/wp-content/uploads/2017/10/facebook-icon.png"></a>
-      </li><li>
-        <a class="messenger-icon" href="http://m.me/mfasterpro" target="_blank"><img src="https://mfaster.com/wp-content/uploads/2017/10/Messenger_Icon.png"></a>
-      </li><li>
-        <a class="line-icon" href="https://line.me/ti/p/~0890078800" target="_blank"><img src="https://mfaster.com/wp-content/uploads/2017/10/LINE_Icon.png"></a>
-      </li><li>
-        <a class="phone-icon" href="tel:+0890078800"><img src="https://mfaster.com/wp-content/uploads/2017/10/phoneicon.png"></a>
-      </li>
-    </ul>
-    
-  <?php
-}
 
 /**
  * Enqueue css and javascript for confirmation payment page.
@@ -40,19 +23,25 @@ function social_side_contact_scripts() {
 		wp_enqueue_style( 'social_side_contact', plugin_dir_url( __FILE__ ) . 'social_side_contact.css' , array() );
 	}
 }
-
+// create custom plugin settings menu
 add_action('admin_menu', 'social_side_contact_menu');
 
 function social_side_contact_menu() {
-	add_menu_page('Social Side Contact Settings', 'Social Side', 'administrator', 'social-side-contact-settings', 'social_side_contact_settings_page', 'dashicons-facebook');
+  //create new top-level menu
+  add_menu_page('Social Side Contact Settings', 'Social Side', 'administrator', 'social-side-contact-settings', 'social_side_contact_settings_page', 'dashicons-facebook');
+  
+  //call register settings function
+  add_action( 'admin_init', 'social_side_contact_settings' );
+  
 }
 
 add_action( 'admin_init', 'social_side_contact_settings' );
 
 function social_side_contact_settings() {
-	register_setting( 'social-side-contact-settings-group', 'accountant_name' );
-	register_setting( 'social-side-contact-settings-group', 'accountant_phone' );
-	register_setting( 'social-side-contact-settings-group', 'accountant_email' );
+	register_setting( 'social-side-contact-settings-group', 'fbp' );
+	register_setting( 'social-side-contact-settings-group', 'fbm' );
+  register_setting( 'social-side-contact-settings-group', 'line' );
+  register_setting( 'social-side-contact-settings-group', 'phone' );
 }
 
 function social_side_contact_settings_page() {
@@ -66,12 +55,12 @@ function social_side_contact_settings_page() {
         <table class="form-table">
             <tr valign="top">
             <th scope="row">Facebook page</th>
-            <td><input type="text" name="facebook-page" value="<?php echo esc_attr( get_option('fbp') ); ?>" /></td>
+            <td><input type="text" name="fbp" value="<?php echo esc_attr( get_option('fbp') ); ?>" /></td>
             </tr>
              
             <tr valign="top">
             <th scope="row">Facebook Message</th>
-            <td><input type="text" name="facebook-message" value="<?php echo esc_attr( get_option('fbm') ); ?>" /></td>
+            <td><input type="text" name="fbm" value="<?php echo esc_attr( get_option('fbm') ); ?>" /></td>
             </tr>
             
             <tr valign="top">
@@ -81,7 +70,7 @@ function social_side_contact_settings_page() {
 
             <tr valign="top">
             <th scope="row">Phone Number</th>
-            <td><input type="text" name="phonenumber" value="<?php echo esc_attr( get_option('phone') ); ?>" /></td>
+            <td><input type="text" name="phone" value="<?php echo esc_attr( get_option('phone') ); ?>" /></td>
             </tr>
         </table>
         
@@ -92,3 +81,25 @@ function social_side_contact_settings_page() {
     <?php
 }
 
+
+
+
+add_action( 'wp_head', 'social_side_contact' );
+function social_side_contact() {
+
+  ?>
+
+    <ul id="social_side_links">
+      <li>
+        <a class="facebook-icon" <?php echo 'href="'. get_option( 'fbp' ) . '" ';?> target="_blank"><?php echo '<img src="' . plugins_url( 'images/facebook-icon.png', __FILE__ ) . '" > ';?></a>
+      </li><li>
+        <a class="messenger-icon" <?php echo 'href="'. get_option( 'fbm' ) . '" ';?> target="_blank"><?php echo '<img src="' . plugins_url( 'images/Messenger_Icon.png', __FILE__ ) . '" > ';?></a>
+      </li><li>
+        <a class="line-icon" <?php echo 'href="'. get_option( 'line' ) . '" ';?> target="_blank"><?php echo '<img src="' . plugins_url( 'images/LINE_Icon.png', __FILE__ ) . '" > ';?></a>
+      </li><li>
+        <a class="phone-icon" <?php echo 'href="tel:+'. get_option( 'line' ) . '" > ';?> <?php echo '<img src="' . plugins_url( 'images/phoneicon.png', __FILE__ ) . '" > ';?></a>
+      </li>
+    </ul>
+    
+  <?php
+}

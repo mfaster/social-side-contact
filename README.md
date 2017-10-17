@@ -1,7 +1,7 @@
 # Social Side Contact
 
 
-Make you customer easy to contact you via social network such as Line, Facebookpage chat, phone and e-mail
+Make you customer easy to contact you via social network such as Line, Facebookpage, Facebookchat and Phone
 
 
 ## Getting Started
@@ -39,7 +39,7 @@ Phone number
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License 
 
 ## Acknowledgments
 

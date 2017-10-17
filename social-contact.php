@@ -59,7 +59,7 @@ function social_side_contact_settings_page() {
             </tr>
              
             <tr valign="top">
-            <th scope="row">Facebook Message</th>
+            <th scope="row">Facebook Messager</th>
             <td><input type="text" name="fbm" value="<?php echo esc_attr( get_option('fbm') ); ?>" /></td>
             </tr>
             

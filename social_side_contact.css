@@ -3,7 +3,7 @@
 #social_side_links {
     position: fixed;
     top: 30%;
-    left: -50px;
+/*     left: -50px; */
     padding: 0;
     list-style: none;
     z-index: 99;

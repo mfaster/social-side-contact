@@ -106,7 +106,7 @@ function social_side_contact() {
       </li><li>
         <a class="email-icon" <?php echo 'href="mailto:'. get_option( 'mail' ) . '" > ';?> <?php echo '<img src="' . plugins_url( 'images/emailIcon.png', __FILE__ ) . '" > ';?></a>
       </li><li>
-        <a class="phone-icon" <?php echo 'href="tel:+'. get_option( 'line' ) . '" > ';?> <?php echo '<img src="' . plugins_url( 'images/phoneicon.png', __FILE__ ) . '" > ';?></a>
+        <a class="phone-icon" <?php echo 'href="tel:+'. get_option( 'phone' ) . '" > ';?> <?php echo '<img src="' . plugins_url( 'images/phoneicon.png', __FILE__ ) . '" > ';?></a>
       </li>
       
     </ul>

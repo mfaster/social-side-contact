@@ -1,18 +1,19 @@
 <?php
 /**
  * Plugin Name: Social Side Contact
- * Plugin URI: https://mfaster.com
- * Description: This plugin adds social contract on page ,to let customer easy to contact you guys
- * Version: 1.0.0
+ * Plugin URI: https://github.com/mfaster/social-side-contact
+ * Description: This plugin adds social contract on page ,to let user easy to contact you guys
+ * Version: 1.0.9
  * Author: Q_Q
- * Author URI: https://mfaster.com
+ * Author URI: https://github.com/mfaster
+ * Text Domain: social-side-contact
  * License: GPL2
  */
 
 
 
 /**
- * Enqueue css and javascript for confirmation payment page.
+ * Enqueue css and javascript for page.
  * CSS for feel good.
  * javascript for validate data.
  */

@@ -9,7 +9,7 @@ Make you customer easy to contact you via social network such as Line, Facebookp
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+It's very easy just Download and install from Wordpress Plugin page
 
 
 ### Installing

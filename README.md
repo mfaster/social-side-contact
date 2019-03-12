@@ -9,7 +9,7 @@ Make you customer easy to contact you via social network such as Line, Facebookp
 
 ## Getting Started
 
-It's very easy just Download and install from Wordpress Plugin page
+It's very easy. Just download and activate from Wordpress Plugin page
 
 
 ### Installing

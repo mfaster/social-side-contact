@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Social Side Contact
- * Plugin URI: https://github.com/mfaster/social-side-contact
+ * Plugin URI: https://wordpress.org/plugins/social-side-contact
  * Description: This plugin adds social contract on page ,to let user easy to contact you guys
  * Version: 1.0.9
  * Author: Q_Q
